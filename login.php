@@ -11,11 +11,11 @@
 
     <form action="process.php" method="POST">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username">
         <br><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password">
         <br><br>
 
         <button type="submit">Login</button>
@@ -35,10 +35,7 @@
     if ($username === $correctUsername && $password === $correctPassword) {
         header("Location: login.php");
         echo "<h2>Welcome, $username!</h2>";
-    } else {
-        echo "<h2>Error: Invalid username or password.</h2>";
-        echo "<a href='login.php'>Go back to Login</a>";
-    }
+    } 
 } 
 ?>
     </form>
