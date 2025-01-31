@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Form</title>
 </head>
 <body>
-    <form action="" method="POST">
-        <label for="email">Username: </label>
-        <input type="text" name="email"><br>
-        <label for="password">Password: </label>
-        <input type="password" name="password">
-        <input type="submit" value="submit">
+
+    <h2>Login Form</h2>
+
+    <form action="process.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <button type="submit">Login</button>
+        <?php include 'process.php'; ?>
+
     </form>
 
-    <?php 
-        $user = "admin";
-        $pass = "1234";
-
-        if (isset($_POST["email"])) {
-            echo"Please input password";
-        } header(url("process.php"));
-    ?>
-    
 </body>
 </html>
