@@ -13,6 +13,7 @@
     </form>
 
     <?php
+        echo "hi";
         $age = $_POST["age"];
 
         if ($age >= 18) {
