@@ -1,28 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP</title>
-</head>
-<body>
-    <form action="" method="POST">
-        <label for="age">Age Checker:</label><br>
-        <input type="text" name="age" required><br>
-        <input type="submit" value="check">
-    </form>
+<?php 
+    $temp = -10;
+    $cloudy = true;
 
-    <?php
-        echo "hi";
-        $age = $_POST["age"];
+    if ($temp >= 0 && $temp <= 30) {
+        echo "The weather is good <br>";
+    } else {
+        echo "The weather is bad <br>";
+    }
 
-        if ($age >= 18) {
-            echo "Your age is legal <br>";
-        } elseif($age < 18) {
-            echo "Your a minnor <br>";
-        } else {
-            echo "Please fill out the inputs <br>";
-        }
-    ?>
-</body>
-</html>
+    if($cloudy) {
+        echo "It's fucking cloudy";
+    } else {
+        echo "It's sunnny";
+    }
+    
+?>
