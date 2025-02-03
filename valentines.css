@@ -47,10 +47,15 @@ img {
     margin-bottom: 20px; 
 }
 
-input {
+.inputs {
     display: grid;
-   
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 50px; 
+
 }
+
+
+
 
 
 

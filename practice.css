@@ -3,10 +3,4 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin-left: 15rem;
-}
-
-.container {
-    border-color: black;
-    width: 100px;
 }
