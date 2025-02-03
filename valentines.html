@@ -10,8 +10,8 @@
 <body>
     <div class="container">
         <div class="valentine-container">
-            <label for="valentine">Will you be my valentine?</label><br>
-            <div class="image">
+            <label for="valentine" id="valentineLabel">Will you be my valentine?</label><br>
+            <div class="image" id="valentineImage">
                 <img src="Excited Milk And Mocha GIF - Excited Milk And Mocha Cute Bear - Discover & Share GIFs.gif" alt="">
             </div>
             <div class="inputs">
@@ -21,7 +21,24 @@
         </div>
     </div>
     <script>
+
+        const yesButton = document.getElementById('yes');
+        const noButton = document.getElementById('no');
+        const valentineLabel = document.getElementById('valentineLabel');
+        const valentineImage = document.getElementById('valentineImage');
+
         
+        yesButton.addEventListener('click', function() {
+            valentineLabel.textContent = "Yay! You said yes! 💖";
+            valentineImage.innerHTML = '<img src="https://media.giphy.com/media/3o7TKxJrtGLUUlajm8/giphy.gif" alt="Happy GIF">';
+        });
+
+        
+        noButton.addEventListener('click', function() {
+            valentineLabel.textContent = "Oh no, maybe next time... 😢";
+            valentineImage.innerHTML = '<img src="https://media1.tenor.com/m/B9DyAQOcUW0AAAAC/cute-cat.gif" alt="Happy GIF">';
+            valentineImage.innerHTML = ''; 
+        });
     </script>
 </body>
 </html>
